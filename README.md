@@ -8,6 +8,7 @@ Required Python packages:
 - ```tensorflow```
 - ```gym```
 - ```box2d``` and ```box2d-kengz```
+- ```matplotlib```
 ## Run
 ```shell
 python main.py
