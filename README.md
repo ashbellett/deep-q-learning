@@ -1,5 +1,6 @@
 # Deep Q-Learning
-Implementation of the DQN deep reinforcement learning algorithm.
+Implementation of the DQN deep reinforcement learning algorithm.  
+Original paper: https://www.nature.com/articles/nature14236
 ## Pre-requisites
 Install Python: https://www.python.org/  
 Install swig: http://www.swig.org/  
