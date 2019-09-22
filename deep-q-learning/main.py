@@ -12,7 +12,7 @@ def main():
     if RECORD:
         environment = Monitor(
             env=environment,
-            directory='./video/',
+            directory=VIDEO_DIRECTORY,
             video_callable=lambda episode_id: True,
             force=True
         )
@@ -54,8 +54,11 @@ def main():
         # Average reward over the last 100 episodes
         average_reward = np.mean(rewards[-100:])
         print("Average reward: {:.2f}\n".format(average_reward))
-    # Terminate environment and plot rewards
+    # Terminate environment
     environment.close()
+    # Save model
+    agent.save(CHECKPOINT_DIRECTORY)
+    # Display performance over time
     summary(rewards)
 
 if __name__ == "__main__":

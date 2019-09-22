@@ -69,3 +69,7 @@ class Agent():
             # Decrease likelihood of exploratory action
             if self.epsilon > self.epsilon_min:
                 self.epsilon *= self.epsilon_decay
+
+    def save(self, directory):
+        """ Saves model weights. """
+        self.model.save_weights(directory)

@@ -10,4 +10,7 @@ def summary(rewards):
     plt.xlabel("Episode count")
     plt.ylabel("Episode reward")
     plt.grid(True)
+    plt.savefig(
+        FIGURE_DIRECTORY
+    )
     plt.show()
