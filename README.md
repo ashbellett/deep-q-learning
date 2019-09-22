@@ -3,6 +3,7 @@ Python implementations of various reinforcement learning algorithms.
 ## Pre-requisites
 Install Python: https://www.python.org/  
 Install Swig: http://www.swig.org/  
+Install FFmpeg: https://ffmpeg.org/  
 Required Python packages:
 - ```numpy```
 - ```tensorflow``` or ```tensorflow-gpu```
