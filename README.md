@@ -16,10 +16,7 @@ pip3 install -r 'requirements.txt'
 ```
 ## Run
 ```shell
-cd {deep-q-learning}
-```
-```shell
-python3 main.py
+python3 {deep-q-learning}/main.py
 ```
 ## Implementations
 - Deep Q-Learning: https://www.nature.com/articles/nature14236
