@@ -1,5 +1,5 @@
 import matplotlib.pyplot as plt
-from constants import *
+from .constants import *
 
 def summary(rewards):
     """ Plots rewards as a function of episode count. """

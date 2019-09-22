@@ -1,8 +1,8 @@
 import numpy as np
 import gym
-from agent import Agent
-from summary import summary
-from constants import *
+from lib.agent import Agent
+from lib.summary import summary
+from lib.constants import *
 
 def main():
     """ Orchestrates agent and environment interactions. """
