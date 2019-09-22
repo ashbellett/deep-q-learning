@@ -1,7 +1,7 @@
 import numpy as np
 import gym
-from summary import summary
 from agent import Agent
+from summary import summary
 from constants import *
 
 def main():
