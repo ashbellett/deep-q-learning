@@ -1,5 +1,6 @@
 import numpy as np
 import gym
+from gym.wrappers import Monitor
 from lib.agent import Agent
 from lib.summary import summary
 from lib.constants import *
@@ -8,6 +9,13 @@ def main():
     """ Orchestrates agent and environment interactions. """
     # Create environment
     environment = gym.make(ENVIRONMENT)
+    if RECORD:
+        environment = Monitor(
+            env=environment,
+            directory='./video/',
+            video_callable=lambda episode_id: True,
+            force=True
+        )
     # Set random seeds
     environment.seed(0)
     np.random.seed(0)
@@ -47,8 +55,8 @@ def main():
         average_reward = np.mean(rewards[-100:])
         print("Average reward: {:.2f}\n".format(average_reward))
     # Terminate environment and plot rewards
-    summary(rewards)
     environment.close()
+    summary(rewards)
 
 if __name__ == "__main__":
     main()
