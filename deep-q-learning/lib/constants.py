@@ -1,5 +1,5 @@
 ENVIRONMENT = 'LunarLander-v2'
-CHECKPOINT_DIRECTORY = './deep-q-learning/output/model/'
+CHECKPOINT_DIRECTORY = './deep-q-learning/output/model/checkpoint'
 FIGURE_DIRECTORY = './deep-q-learning/output/summary.png'
 VIDEO_DIRECTORY = './deep-q-learning/output/video'
 EPISODES = 256
