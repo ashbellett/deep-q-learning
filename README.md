@@ -16,7 +16,8 @@ pip3 install -r 'requirements.txt'
 ```
 ## Run
 ```shell
-python3 {deep-q-learning}/main.py
+python3 {mdp, dqn}/main.py
 ```
 ## Implementations
-- Deep Q-Learning: https://www.nature.com/articles/nature14236
+- Markov Decision Process (mdp)
+- Deep Q-Learning (dqn): https://www.nature.com/articles/nature14236
