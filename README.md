@@ -20,4 +20,4 @@ python3 {mdp, dqn}/main.py
 ```
 ## Implementations
 - Markov Decision Process (mdp)
-- Deep Q-Learning (dqn): https://www.nature.com/articles/nature14236
+- Deep Q-Network (dqn): https://www.nature.com/articles/nature14236
