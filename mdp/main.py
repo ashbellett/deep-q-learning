@@ -1,7 +1,9 @@
 from itertools import permutations
+import networkx as nx
+import matplotlib.pyplot as plt
 
-states = ['a', 'b', 'c'] # state space
-actions = ['x', 'y'] # action space
+states = set(('a', 'b', 'c')) # state space
+actions = set(('x', 'y')) # action space
 rewards = {'a': 0, 'b': 1, 'c': -1} # reward function
 
 state_pairs = list(permutations(states, 2)) # (state, next_state)
@@ -10,6 +12,38 @@ transition = {} # transition[(state, next_state), action]
 transition_under_policy = {} # transition_under_policy[state, next_state]
 expected_reward = {} # expected_reward[state, action]
 expected_reward_under_policy = {} # expected_reward_under_policy[state]
+
+graph = nx.MultiDiGraph()
+
+# Add state nodes
+graph.add_nodes_from(states)
+
+# Add state-action nodes
+for state in states:
+    for action in actions:
+        graph.add_node((state, action))
+
+# Add edges from states to state-actions
+for state in states:
+    for action in actions:
+        graph.add_edge(state, (state, action))
+
+# Add edges from state-actions to next states
+for state in states:
+    for action in actions:
+        for next_state in states - set(state):
+            graph.add_edge((state, action), next_state)
+
+# Colour states differently from state-actions
+color_map = []
+for node in graph:
+    if isinstance(node, str):
+        color_map.append('blue')
+    else: color_map.append('red')     
+
+# Draw graph
+nx.draw(graph, node_color=color_map, with_labels=True)
+plt.show()
 
 # TODO convert for loops into dictionary comprehensions
 
