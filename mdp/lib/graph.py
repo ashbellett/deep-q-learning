@@ -19,19 +19,19 @@ for state in states:
             graph.add_edge((state, action), next_state)
 
 # Colour states differently from state-actions
-color_map = []
-for node in graph:
-    if isinstance(node, str):
-        color_map.append('blue')
-    else:
-        color_map.append('red')
+# color_map = []
+# for node in graph:
+#     if isinstance(node, str):
+#         color_map.append('white')
+#     else:
+#         color_map.append('white')
 
 # Draw graph
 pos = nx.kamada_kawai_layout(graph)
 nx.draw(
     graph,
     pos,
-    node_color=color_map,
+    node_color='white',
     edge_color='black',
     width=1,
     linewidths=1,
