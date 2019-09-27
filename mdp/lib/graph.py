@@ -1,5 +1,7 @@
-import networkx as nx
+import matplotlib
+matplotlib.use('TkAgg')
 import matplotlib.pyplot as plt
+import networkx as nx
 from .config import *
 
 # Initialise directed multi-graph
