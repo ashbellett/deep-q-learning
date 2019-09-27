@@ -9,6 +9,7 @@ Required Python packages:
 - ```tensorflow``` or ```tensorflow-gpu```
 - ```gym```
 - ```box2d``` and ```box2d-kengz```
+- ```networkx```
 - ```matplotlib```
 ## Install
 ```shell
