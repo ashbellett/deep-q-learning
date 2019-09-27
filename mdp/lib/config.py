@@ -9,7 +9,7 @@ probabilities = {}
 # Set action probabilities (policy)
 # policy[state, action]
 policy['a', 'x'] = 2/3
-policy['a', 'y'] = 1/2
+policy['a', 'y'] = 1/3
 policy['b', 'x'] = 2/3
 policy['b', 'y'] = 1/3
 policy['c', 'x'] = 2/3

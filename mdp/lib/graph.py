@@ -2,7 +2,6 @@ import matplotlib
 matplotlib.use('TkAgg')
 import matplotlib.pyplot as plt
 import networkx as nx
-from .config import states, actions, probabilities
 
 class Graph:
     def __init__(self, states, actions, probabilities):
@@ -13,6 +12,7 @@ class Graph:
         self.build()
 
     def build(self):
+        ''' Add nodes and edges to graph '''
         self.graph.add_nodes_from(self.states)
         for state in self.states:
             for action in self.actions:
@@ -25,6 +25,7 @@ class Graph:
                     self.graph.add_edge((state, action), next_state)
     
     def draw(self):
+        ''' Draw graph '''
         pos = nx.kamada_kawai_layout(self.graph)
         nx.draw(
             self.graph,
