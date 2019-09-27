@@ -3,6 +3,7 @@ actions = {'x', 'y'}                # action space
 rewards = {'a': 0, 'b': 1, 'c': -1} # reward function
 policy = {}
 transition = {}
+edge_labels = {}
 
 # Set action probabilities (policy)
 # policy[state, action]
@@ -33,3 +34,36 @@ transition[('c', 'a'), 'x'] = 2/3
 transition[('c', 'a'), 'y'] = 1/3
 transition[('c', 'b'), 'x'] = 1/3
 transition[('c', 'b'), 'y'] = 2/3
+
+edge_labels['a', ('a','x')] = '2/3'
+edge_labels['a', ('a','y')] = '1/3'
+edge_labels['b', ('b','x')] = '2/3'
+edge_labels['b', ('b','x')] = '2/3'
+edge_labels['b', ('b','y')] = '1/3'
+edge_labels['c', ('c','x')] = '2/3'
+edge_labels['c', ('c','y')] = '1/3'
+edge_labels[('a','x'), 'b'] = '2/3'
+edge_labels[('a','x'), 'c'] = '1/3'
+edge_labels[('a','y'), 'b'] = '1/3'
+edge_labels[('a','y'), 'c'] = '2/3'
+edge_labels[('b','x'), 'a'] = '1/3'
+edge_labels[('b','x'), 'c'] = '2/3'
+edge_labels[('b','y'), 'a'] = '2/3'
+edge_labels[('b','y'), 'c'] = '1/3'
+edge_labels[('c','x'), 'a'] = '2/3'
+edge_labels[('c','x'), 'b'] = '1/3'
+edge_labels[('c','y'), 'a'] = '1/3'
+edge_labels[('c','y'), 'b'] = '2/3'
+
+# # Node labels:
+# {
+#     'a': 'a',
+#     'b': 'b',
+#     'c': 'c',
+#     ('a', 'x'): 'x',
+#     ('a', 'y'): 'y',
+#     ('b', 'x'): 'x',
+#     ('b', 'y'): 'y',
+#     ('c', 'x'): 'x',
+#     ('c', 'y'): 'y'
+# }
