@@ -1,7 +1,7 @@
 import matplotlib
 matplotlib.use('TkAgg')
 import matplotlib.pyplot as plt
-from .constants import *
+from .config import *
 
 def summary(rewards):
     """ Plots rewards as a function of episode count. """

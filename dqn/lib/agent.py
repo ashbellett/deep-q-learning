@@ -2,7 +2,7 @@ import random
 import numpy as np
 from collections import deque
 from .model import Model
-from .constants import *
+from .config import *
 
 class Agent():
     """ Observes environment, selects actions and trains model. """
