@@ -1,6 +1,8 @@
 states = {'a', 'b', 'c'}            # state space
 actions = {'x', 'y'}                # action space
 rewards = {'a': 0, 'b': 1, 'c': -1} # reward function
+horizon = 10
+discount_factor = 0.9
 
 policy = {}
 transitions = {}
@@ -14,6 +16,13 @@ policy['b', 'x'] = 2/3
 policy['b', 'y'] = 1/3
 policy['c', 'x'] = 2/3
 policy['c', 'y'] = 1/3
+
+# policy['a', 'x'] = 1/2
+# policy['a', 'y'] = 1/2
+# policy['b', 'x'] = 1/2
+# policy['b', 'y'] = 1/2
+# policy['c', 'x'] = 1/2
+# policy['c', 'y'] = 1/2
 
 # Set state transition probabilities
 # transitions[(state, next_state), action]
