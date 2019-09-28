@@ -3,7 +3,7 @@ import gym
 from gym.wrappers import Monitor
 from lib.agent import Agent
 from lib.summary import summary
-from lib.constants import *
+from lib.config import *
 
 def main():
     """ Orchestrates agent and environment interactions. """
