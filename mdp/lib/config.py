@@ -1,10 +1,11 @@
 FIGURE_DIRECTORY = './mdp/output/graph.png'
+EPISODES = 1000
+HORIZON = 100
 
-states = {'a', 'b', 'c'}            # state space
-actions = {'x', 'y'}                # action space
+states = ['a', 'b', 'c']            # state space
+actions = ['x', 'y']                # action space
 rewards = {'a': 0, 'b': 1, 'c': -1} # reward function
-horizon = 10
-discount_factor = 0.9
+discount_factor = 1
 
 policy = {}
 transitions = {}

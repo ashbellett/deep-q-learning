@@ -22,7 +22,7 @@ class Graph:
                 # Add edges from states to state-actions
                 self.graph.add_edge(state, (state, action))
                 # Add edges from state-actions to next states
-                for next_state in self.states - set(state):
+                for next_state in set(self.states) - set(state):
                     self.graph.add_edge((state, action), next_state)
     
     def draw(self):
