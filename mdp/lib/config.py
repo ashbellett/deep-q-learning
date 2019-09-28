@@ -1,3 +1,5 @@
+FIGURE_DIRECTORY = './mdp/output/graph.png'
+
 states = {'a', 'b', 'c'}            # state space
 actions = {'x', 'y'}                # action space
 rewards = {'a': 0, 'b': 1, 'c': -1} # reward function

@@ -2,6 +2,7 @@ import matplotlib
 matplotlib.use('TkAgg')
 import matplotlib.pyplot as plt
 import networkx as nx
+from .config import FIGURE_DIRECTORY
 
 class Graph:
     def __init__(self, states, actions, probabilities):
@@ -43,4 +44,6 @@ class Graph:
             edge_labels=self.probabilities,
             font_size=8
         )
+        plt.savefig(FIGURE_DIRECTORY)
         plt.show()
+        
