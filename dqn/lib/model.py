@@ -27,4 +27,5 @@ class Model():
             loss='mse',
             metrics=['accuracy']
         )
+        model.summary()
         return model

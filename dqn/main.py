@@ -1,3 +1,4 @@
+from os import path
 import numpy as np
 import gym
 from gym.wrappers import Monitor
@@ -24,6 +25,9 @@ def main():
     state_space = environment.observation_space.shape[0]
     # Instantiate agent
     agent = Agent(action_space, state_space)
+    # Load model weights
+    if path.exists(CHECKPOINT_DIRECTORY):
+        agent.load(CHECKPOINT_DIRECTORY)
     # Initialise list of all rewards
     rewards = []
     for episode in range(EPISODES):
